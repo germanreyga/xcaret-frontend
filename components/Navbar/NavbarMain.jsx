@@ -11,7 +11,7 @@ function NavbarMain() {
         menu: {},
     });
 
-    // Fetch the information that will populate the Navbar
+    // Fetch the information that will populate the Navbar (logo, language, contact and currencies)
     const fetchNavbarData = useCallback(async () => {
         const data = await fetchLocaleDataFromApi(locale);
 
