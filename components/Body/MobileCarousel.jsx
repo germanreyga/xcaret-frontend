@@ -31,7 +31,7 @@ function MobileCarousel({ text, mobileImgs, promotionsData }) {
                     <Swipe onSwipeLeft={goNextSlide} onSwipeRight={goPrevSlide}>
                         {mobileImgs.map((mImg, index) => {
                             return (
-                                <div key={mImg.src}>
+                                <div key={index}>
                                     <Image
                                         className={
                                             index === currentSlide
@@ -60,21 +60,22 @@ function MobileCarousel({ text, mobileImgs, promotionsData }) {
                 </div>
             </div>
 
-            {promotionsData.map((promotion) => {
-                return (
-                    <div className="-mt-12 z-40">
-                        <Promotion
-                            key={promotion.title + " " + promotion.subtitle}
-                            title={promotion.title}
-                            logoPromo={promotion.logoPromo}
-                            subtitle={promotion.Subtitle}
-                            paragraphs={promotion.paragraphs}
-                            buttonInfo={promotion.button}
-                            imagePromo={promotion.imagePromo}
-                        />
-                    </div>
-                );
-            })}
+            <div className="z-10">
+                {promotionsData.map((promotion, index) => {
+                    return (
+                        <div className="-mt-12" key={index}>
+                            <Promotion
+                                title={promotion.title}
+                                logoPromo={promotion.logoPromo}
+                                subtitle={promotion.Subtitle}
+                                paragraphs={promotion.paragraphs}
+                                buttonInfo={promotion.button}
+                                imagePromo={promotion.imagePromo}
+                            />
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 }
