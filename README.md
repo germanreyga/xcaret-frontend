@@ -1,8 +1,29 @@
+# Grupo Xcaret FrontEnd challenge
+
+## About this project
+
+Frontend challenge to participate in Grupo Xcaret hiring process.
+
+It consists of building a simple, responsive landing page using the following technologies:
+
+-   Next.js
+-   Tailwind CSS
+-   Redux
+-   [react-device-detect](https://www.npmjs.com/package/react-device-detect)
+
+## Run the project
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+First, install the dependencies:
 
-First, run the development server:
+```bash
+npm install
+# or
+yarn install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -10,25 +31,20 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will start running on [http://localhost:3000](http://localhost:3000). Open it to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Deployment
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+I've taken the liberty of deploying this simple app on Vercel. You can view it on [https://xcaret-frontend.vercel.app/](https://xcaret-frontend.vercel.app/)!
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Screenshots
 
-## Learn More
+### Desktop landing page
 
-To learn more about Next.js, take a look at the following resources:
+![xcaret-frontend](https://user-images.githubusercontent.com/26470569/202667688-3dc1fb8f-208d-46f7-9e02-bc8613bff7ff.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Mobile landing page
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![xcaret-frontend-m](https://user-images.githubusercontent.com/26470569/202667739-a7b8420e-7d5b-4a82-8ca8-c96024c597ee.png)
