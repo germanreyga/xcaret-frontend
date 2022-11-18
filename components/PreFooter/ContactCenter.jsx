@@ -1,8 +1,8 @@
 function ContactCenter({ title, email }) {
     return (
-        <div>
-            <h1>{title}</h1>
-            <h3>{email}</h3>
+        <div className="mt-6 text-xs">
+            <p className="font-bold">{title}</p>
+            <p className="font-extralight">{email}</p>
         </div>
     );
 }

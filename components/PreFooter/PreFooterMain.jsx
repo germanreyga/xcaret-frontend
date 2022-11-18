@@ -39,27 +39,32 @@ function PreFooterMain() {
     }, [locale]);
 
     return (
-        <div className="bg-yellow-100">
-            <ContactCenter
-                title={contactCenterData.title}
-                email={contactCenterData.email}
-            />
-            {phonesData.map((phone) => {
-                return (
-                    <PhoneNumber
-                        key={phone.name}
-                        name={phone.name}
-                        number={phone.number}
-                        href={phone.href}
-                        main={phone.main}
-                    />
-                );
-            })}
+        <div className="bg-zinc-800 text-white p-6">
             <Socials
+                color={"white"}
                 facebookUrl={socialsData.facebookUrl}
                 twitterUrl={socialsData.twitterUrl}
                 instagramUrl={socialsData.instagramUrl}
             />
+
+            <ContactCenter
+                title={contactCenterData.title}
+                email={contactCenterData.email}
+            />
+
+            <div className="flex flex-row flex-wrap">
+                {phonesData.map((phone) => {
+                    return (
+                        <PhoneNumber
+                            key={phone.name}
+                            name={phone.name}
+                            number={phone.number}
+                            href={phone.href}
+                            main={phone.main}
+                        />
+                    );
+                })}
+            </div>
         </div>
     );
 }

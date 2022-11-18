@@ -1,7 +1,7 @@
 function Logo({ url }) {
     return (
-        <div>
-            <img src={url} alt="Xcaret Logo" width="221" height="28" />
+        <div className="basis-1/3 md:basis-1/8">
+            <img src={url} alt="Xcaret Logo" height="100%" />
         </div>
     );
 }

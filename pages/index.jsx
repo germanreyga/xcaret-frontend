@@ -7,13 +7,15 @@ import PreFooterMain from "../components/PreFooter/PreFooterMain";
 
 export default function Home() {
     return (
-        <div className="p-6">
-            <NavbarMain />
-            <HeaderMain />
-            <BodyMain />
-            <LegalsMain />
-            <PreFooterMain />
-            <FooterMain />
+        <div className="flex justify-center">
+            <div className="l:w-2/3 ">
+                <NavbarMain />
+                <HeaderMain />
+                <BodyMain />
+                <LegalsMain />
+                <PreFooterMain />
+                <FooterMain />
+            </div>
         </div>
     );
 }

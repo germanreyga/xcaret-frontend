@@ -27,12 +27,16 @@ function HeaderMain() {
     }, [locale]);
 
     return (
-        <div className="bg-teal-100">
-            <h1>{headerData.heading}</h1>
-            <p>{headerData.discount}</p>
-            {headerData.paragraphs.map((paragraph, index) => {
-                return <p key={index}>{paragraph}</p>;
-            })}
+        <div className="bg-gray-200 flex flex-col items-center px-4 py-8">
+            <h1 className="text-4xl p-4 uppercase font-medium">
+                {headerData.heading}
+            </h1>
+            <p className="text-4xl p-4 font-medium">{headerData.discount}</p>
+            <div className="text-xl p-4 text-gray-800">
+                {headerData.paragraphs.map((paragraph, index) => {
+                    return <p key={index}>{paragraph}</p>;
+                })}
+            </div>
         </div>
     );
 }

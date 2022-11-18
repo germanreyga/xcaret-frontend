@@ -33,9 +33,9 @@ function Menu({ lang = {}, contact, currency = [] }) {
     };
 
     return (
-        <ul className="flex space-x-2 uppercase">
+        <ul className="flex space-x-2 uppercase text-xs mr-3">
             <li>{contact}</li>
-            <li>·</li>
+            <li className="invisible md:visible">·</li>
             <li>
                 <button
                     className="uppercase"
@@ -44,7 +44,8 @@ function Menu({ lang = {}, contact, currency = [] }) {
                     {lang.title}
                 </button>
             </li>
-            <li>·</li>
+
+            <li className="invisible md:visible">·</li>
             <li>
                 <button
                     className="uppercase"

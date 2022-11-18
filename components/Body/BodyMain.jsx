@@ -1,8 +1,14 @@
 import { useSelector } from "react-redux";
 import { useState, useEffect, useCallback } from "react";
 import { fetchLocaleDataFromApi } from "../../data/fetchData";
-import Carousel from "./Carousel";
-import Promotion from "./Promotion";
+import WebCarousel from "./WebCarousel";
+import MobileCarousel from "./MobileCarousel";
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile,
+} from "react-device-detect";
 
 function BodyMain() {
     const { locale } = useSelector((state) => state.language);
@@ -47,24 +53,16 @@ function BodyMain() {
     }, [locale]);
 
     return (
-        <div className="bg-red-100">
-            {promotionsData.map((promotion) => {
-                return (
-                    <Promotion
-                        key={promotion.title + " " + promotion.subtitle}
-                        title={promotion.title}
-                        logoPromo={promotion.logoPromo}
-                        subtitle={promotion.Subtitle}
-                        paragraphs={promotion.paragraphs}
-                        buttonInfo={promotion.button}
-                        imagePromo={promotion.imagePromo}
-                    />
-                );
-            })}
-            <Carousel
+        <div>
+            {/* <WebCarousel
                 text={carouselData.text}
                 desktopImgs={carouselData.desktopImgs}
+            /> */}
+
+            <MobileCarousel
+                text={carouselData.text}
                 mobileImgs={carouselData.mobileImgs}
+                promotionsData={promotionsData}
             />
         </div>
     );

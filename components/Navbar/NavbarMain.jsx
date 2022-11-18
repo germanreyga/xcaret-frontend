@@ -26,7 +26,7 @@ function NavbarMain() {
     }, [locale]);
 
     return (
-        <div className="sticky top-0 z-50 bg-gray-100 flex justify-between p-7">
+        <div className="sticky top-0 z-50 bg-gray-100 px-2 py-6 flex flex-row justify-between drop-shadow-sm">
             <Logo url={navbarData.logo} />
             <Menu
                 lang={navbarData.menu.lang}

@@ -1,10 +1,10 @@
-function Socials({ facebookUrl, instagramUrl, twitterUrl }) {
+function Socials({ facebookUrl, instagramUrl, twitterUrl, color }) {
     // To accelerate development I used the following implementation which uses a single image which contains all
     // socials icons, and the viewBox is what changes for every icon.
     // Implementation found in: https://tailwind-elements.com/docs/standard/components/social-buttons/
 
     return (
-        <div className="flex justify-center space-x-2 text-gray-700">
+        <div className={`flex justify-center space-x-2 text-${color}`}>
             {/* Facebook */}
             <a type="button" href={facebookUrl}>
                 <svg

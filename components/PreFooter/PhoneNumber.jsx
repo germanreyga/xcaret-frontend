@@ -1,7 +1,7 @@
 function PhoneNumber({ name, number, href, main }) {
     return (
-        <div>
-            <span className={main && "font-bold"}>{name}</span>
+        <div className="flex flex-col uppercase mt-6 text-xs font-extralight basis-1/2">
+            <span className={""}>{name}</span>
             {number && <a href={"tel:" + href}>{number}</a>}
         </div>
     );

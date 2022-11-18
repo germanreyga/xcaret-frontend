@@ -29,12 +29,12 @@ function FooterMain() {
     }, [locale]);
 
     return (
-        <div className="bg-blue-100">
+        <div className="flex flex-col items-center bg-black text-neutral-400 font-extralight py-2 text-xs">
             <p>{copyrightData} </p>
-            <ul>
-                {footerLinks.map((link) => {
+            <ul className="flex flex-row space-x-4">
+                {footerLinks.map((link, index) => {
                     return (
-                        <li key={link.title}>
+                        <li key={index}>
                             <a href={link.href}>{link.tittle}</a>
                         </li>
                     );
