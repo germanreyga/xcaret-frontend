@@ -60,7 +60,7 @@ function MobileCarousel({ text, mobileImgs, promotionsData }) {
                 </div>
             </div>
 
-            <div className="z-10">
+            <div>
                 {promotionsData.map((promotion, index) => {
                     return (
                         <div className="-mt-12" key={index}>

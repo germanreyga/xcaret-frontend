@@ -40,19 +40,11 @@ function Promotion({
                 <p className="py-8">Tickets: {createRandNum(1, 10)}</p>
                 <p>Resumen de compra / Purchase summary:</p>
                 {/* Random purchase summary */}
-                <p className="text-sm px-16 italic py-16">
+                <p className="text-sm px-8 italic py-8">
                     Ut posuere metus sed enim congue, sit amet accumsan quam
                     pretium. Curabitur in pulvinar urna, in tempor ante.
                     Praesent non aliquam lorem. Nam sit amet orci tortor. Fusce
-                    pulvinar sit amet massa nec congue. Maecenas condimentum
-                    felis ultricies, posuere ipsum ut, ullamcorper eros. Sed
-                    porttitor imperdiet dignissim. Pellentesque nec nibh
-                    finibus, porttitor turpis ac, varius risus. In nec rutrum
-                    purus. Etiam vulputate dolor non ante molestie malesuada.
-                    Pellentesque at augue hendrerit, rhoncus ipsum sed, tempus
-                    mauris. Nunc venenatis enim et velit aliquet euismod. Nulla
-                    quis maximus justo, sit amet aliquet tellus. Suspendisse sit
-                    amet orci quis elit interdum vehicula vitae ac quam
+                    pulvinar sit amet massa nec congue.
                 </p>
                 {/* Create a random price for the purchase */}
                 <p>
