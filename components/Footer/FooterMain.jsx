@@ -29,7 +29,7 @@ function FooterMain() {
     }, [locale]);
 
     return (
-        <div className="flex flex-col items-center bg-black text-neutral-400 font-extralight py-2 text-xs">
+        <div className="flex flex-col md:flex-row justify-around items-center bg-black text-neutral-400 md:text-white font-extralight py-2 text-xs md:text-sm md:px-8">
             <p>{copyrightData} </p>
             <ul className="flex flex-row space-x-4">
                 {footerLinks.map((link, index) => {

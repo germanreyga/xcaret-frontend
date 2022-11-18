@@ -54,10 +54,39 @@ function BodyMain() {
 
     return (
         <div>
-            {/* <WebCarousel
+            {/* Placing the Web Carousel 3 times since the data source only provides 1 carousel */}
+            <WebCarousel
                 text={carouselData.text}
                 desktopImgs={carouselData.desktopImgs}
-            /> */}
+                promotionsData={promotionsData}
+            />
+
+            <WebCarousel
+                text={carouselData.text}
+                desktopImgs={carouselData.desktopImgs}
+                promotionsData={promotionsData}
+                reverse
+            />
+
+            <WebCarousel
+                text={carouselData.text}
+                desktopImgs={carouselData.desktopImgs}
+                promotionsData={promotionsData}
+            />
+
+            {/* Placing the Mobile Carousel 3 times since the data source only provides 1 carousel */}
+
+            <MobileCarousel
+                text={carouselData.text}
+                mobileImgs={carouselData.mobileImgs}
+                promotionsData={promotionsData}
+            />
+
+            <MobileCarousel
+                text={carouselData.text}
+                mobileImgs={carouselData.mobileImgs}
+                promotionsData={promotionsData}
+            />
 
             <MobileCarousel
                 text={carouselData.text}

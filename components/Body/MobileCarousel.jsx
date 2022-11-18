@@ -23,7 +23,7 @@ function MobileCarousel({ text, mobileImgs, promotionsData }) {
     };
 
     return (
-        <div className="flex flex-col items-center pt-8">
+        <div className="flex flex-col items-center pt-8 md:hidden">
             {/* Commented this since there is no correlation in the mock provided */}
             {/* <p>{text}</p> */}
             <div className="mt-8 ">
@@ -62,15 +62,17 @@ function MobileCarousel({ text, mobileImgs, promotionsData }) {
 
             {promotionsData.map((promotion) => {
                 return (
-                    <Promotion
-                        key={promotion.title + " " + promotion.subtitle}
-                        title={promotion.title}
-                        logoPromo={promotion.logoPromo}
-                        subtitle={promotion.Subtitle}
-                        paragraphs={promotion.paragraphs}
-                        buttonInfo={promotion.button}
-                        imagePromo={promotion.imagePromo}
-                    />
+                    <div className="-mt-12 z-40">
+                        <Promotion
+                            key={promotion.title + " " + promotion.subtitle}
+                            title={promotion.title}
+                            logoPromo={promotion.logoPromo}
+                            subtitle={promotion.Subtitle}
+                            paragraphs={promotion.paragraphs}
+                            buttonInfo={promotion.button}
+                            imagePromo={promotion.imagePromo}
+                        />
+                    </div>
                 );
             })}
         </div>

@@ -28,14 +28,18 @@ function HeaderMain() {
 
     return (
         <div className="bg-gray-200 flex flex-col items-center px-4 py-8">
-            <h1 className="text-4xl p-4 uppercase font-medium">
+            <p className="text-4xl p-4 uppercase font-semibold">
                 {headerData.heading}
-            </h1>
-            <p className="text-4xl p-4 font-medium">{headerData.discount}</p>
-            <div className="text-xl p-4 text-gray-800">
-                {headerData.paragraphs.map((paragraph, index) => {
-                    return <p key={index}>{paragraph}</p>;
-                })}
+            </p>
+            <div className="flex flex-col md:flex-row justify-center items-center text-xl md:text-4xl">
+                <p className="p-4 text-4xl basis-1/4 md:text-center font-semibold">
+                    {headerData.discount}
+                </p>
+                <div className="p-4 text-gray-800 basis-1/4">
+                    {headerData.paragraphs.map((paragraph, index) => {
+                        return <p key={index}>{paragraph}</p>;
+                    })}
+                </div>
             </div>
         </div>
     );

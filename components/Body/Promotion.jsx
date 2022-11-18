@@ -9,7 +9,7 @@ function Promotion({
     imagePromo,
 }) {
     return (
-        <div className="flex flex-col items-center -mt-12 z-40">
+        <div className="flex flex-col justify-center items-center z-40 ">
             <Image
                 src={logoPromo}
                 alt={title + " logo"}
@@ -19,17 +19,17 @@ function Promotion({
                 className="border-solid border-8 border-white"
             />
             <h1 className="uppercase text-xl mt-3 font-semibold">{title}</h1>
-            <div className="p-6">
+            <div className="p-6 flex flex-col items-center">
                 <h2 className="text-xl">{subtitle}</h2>
                 {paragraphs.map((paragraph, index) => {
                     return (
-                        <p className="text-md mt-2" key={index}>
+                        <p className="text-lg mt-2" key={index}>
                             {paragraph}
                         </p>
                     );
                 })}
                 <button
-                    className="mt-4 w-full rounded border border-black py-2"
+                    className="mt-4 w-full md:w-1/4 rounded border border-black py-2"
                     value={buttonInfo.href}
                 >
                     {buttonInfo.text}

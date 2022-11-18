@@ -20,7 +20,10 @@ function LegalsMain() {
     // dangerouslySetInnerHTML attribute is used since the legals information coming from the API has HTML break tags inside the text (<br/>)
     return (
         <div className="bg-gray-200 px-4 py-8 text-sm">
-            <p dangerouslySetInnerHTML={{ __html: legalsData }} />
+            <p
+                className="md:ml-8 md:pl-8"
+                dangerouslySetInnerHTML={{ __html: legalsData }}
+            />
         </div>
     );
 }
